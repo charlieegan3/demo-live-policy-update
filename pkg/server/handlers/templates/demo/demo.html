@@ -1,0 +1,24 @@
+{{define "title"}}Policy Update Demo{{end}}
+
+{{define "content"}}
+
+
+<div class="white w-100 mw8 center pa4 f1">
+{{ if .Allowed }}
+<p class="bg-green tc">
+  {{ .Name }} is allowed
+</p>
+{{ else }}
+<p class="bg-red tc">
+  {{ .Name }} is not allowed
+</pc>
+{{ end }}
+</div>
+
+<div class="w-100 mw7 center tc">
+  <form action="{{ .Path }}" method="GET">
+    <input type="text" name="name" value="{{ .Name }}">
+    <button type="submit">Update Name</button>
+  </form>
+</div>
+{{end}}

@@ -1,0 +1,14 @@
+{{define "title"}}OPAs Configured{{end}}
+
+{{define "content"}}
+<div class="page-content">
+
+    <h2>{{ .Ref }}</h2>
+
+    <form action="/opas" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete OPA</button>
+    </form>
+
+</div>
+{{end}}
